@@ -36,6 +36,12 @@ boulderButton.addEventListener('click', () => {
 });
 
 function handleGuess(correctSpot, userGuess) {
+    resetStyles();
+    totalGuesses++;
+
+    const correctHidingPlace1 = document.getElementById(`${correctSpot}-container`);
+
+    correctHidingPlace1.classList.add('face');
     // reset the styles
     // then increment the guesses
     // then grab the appropriate container element for the correct guess from the DOM
